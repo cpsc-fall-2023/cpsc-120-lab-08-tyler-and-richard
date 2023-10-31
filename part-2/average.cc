@@ -10,7 +10,7 @@
 int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
 
-  double list_args{static_cast<double>(arguments.size()) - 1};
+  int list_args{static_cast<int>(arguments.size()) - 1};
   // Validate that there is at least one command line argument.
   // If not, print an error message and return a non-zero value.
   if (list_args < 1) {
@@ -27,11 +27,11 @@ int main(int argc, char* argv[]) {
   // Each argument is a std::string. You will need to convert each string into
   // a number with the std::stod or std::stof function.
 
-  double temp{0};
-  double total{0};
-  double average{0};
+  double temp{0.0};
+  double total{0.0};
+  double average{0.0};
 
-  for (std::string const &arg : arguments) {
+  for (std::string const& arg : arguments) {
     if (arg == "./average") {
       // ++i;
       continue;
