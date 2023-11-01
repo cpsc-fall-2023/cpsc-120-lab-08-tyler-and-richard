@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
   double average{0.0};
 
   for (std::string const& arg : arguments) {
-    if (arg == "./average") {
+    if (arg == arguments.at(0)) {
       // ++i;
       continue;
     }
